@@ -11,10 +11,10 @@ const Navbar = () => {
         </div>
         <ul className="flex space-x-4">
           <li>
-            <Link to="/" className="hover:text-gray-300">Books</Link>
+            <Link to="/" className="hover:text-gray-300">Книги</Link>
           </li>
           <li>
-            <Link to="/books/new" className="hover:text-gray-300">Add Book</Link>
+            <Link to="/books/new" className="hover:text-gray-300">Добавить книгу</Link>
           </li>
         </ul>
       </div>

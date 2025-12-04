@@ -38,7 +38,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div>
           <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
-            Title
+            Название
           </label>
           <input
             type="text"
@@ -47,13 +47,13 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
             value={filters.title}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Search by title"
+            placeholder="Введите название книги"
           />
         </div>
         
         <div>
           <label htmlFor="author_id" className="block text-sm font-medium text-gray-700 mb-1">
-            Author
+            Автор
           </label>
           <select
             id="author_id"
@@ -62,7 +62,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           >
-            <option value="">All Authors</option>
+            <option value="">Все авторы</option>
             {authors.map(author => (
               <option key={author.id} value={author.id}>{author.name}</option>
             ))}
@@ -71,7 +71,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
         
         <div>
           <label htmlFor="genre_id" className="block text-sm font-medium text-gray-700 mb-1">
-            Genre
+            Жанр
           </label>
           <select
             id="genre_id"
@@ -80,7 +80,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           >
-            <option value="">All Genres</option>
+            <option value="">Все жанры</option>
             {genres.map(genre => (
               <option key={genre.id} value={genre.id}>{genre.name}</option>
             ))}
@@ -89,7 +89,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
         
         <div>
           <label htmlFor="publication_year" className="block text-sm font-medium text-gray-700 mb-1">
-            Year
+            Год
           </label>
           <input
             type="number"
@@ -98,7 +98,7 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
             value={filters.publication_year}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Publication year"
+            placeholder="Год публикации"
             min="1000"
             max="2100"
           />
@@ -109,14 +109,14 @@ const SearchFilter = ({ onSearch, authors, genres }) => {
             type="submit"
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Search
+            Поиск
           </button>
           <button
             type="button"
             onClick={resetFilters}
             className="w-full bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
           >
-            Reset
+            Сбросить
           </button>
         </div>
       </form>

@@ -76,7 +76,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
       }
       onSubmit();
     } catch (err) {
-      console.error('Error saving book:', err);
+      console.error('Ошибка сохранения книги:', err);
       setError(err.response?.data?.detail || 'An error occurred while saving the book');
     } finally {
       setLoading(false);
@@ -84,13 +84,13 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
   };
 
   if (loading && bookId) {
-    return <div className="text-center py-10">Loading...</div>;
+    return <div className="text-center py-10">Загрузка...</div>;
   }
 
   return (
     <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
       <h2 className="text-2xl font-bold mb-6">
-        {bookId ? 'Edit Book' : 'Add New Book'}
+        {bookId ? 'Изменить книгу' : 'Добавить новую книгу'}
       </h2>
       
       {error && (
@@ -103,7 +103,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
-              Title *
+              Название *
             </label>
             <input
               type="text"
@@ -134,7 +134,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
           
           <div>
             <label htmlFor="publication_year" className="block text-sm font-medium text-gray-700 mb-1">
-              Publication Year
+              Год публикации
             </label>
             <input
               type="number"
@@ -151,7 +151,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
           
           <div>
             <label htmlFor="page_count" className="block text-sm font-medium text-gray-700 mb-1">
-              Page Count
+              Количество страниц
             </label>
             <input
               type="number"
@@ -167,7 +167,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
           
           <div>
             <label htmlFor="author_id" className="block text-sm font-medium text-gray-700 mb-1">
-              Author *
+              Автор *
             </label>
             <select
               id="author_id"
@@ -177,7 +177,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             >
-              <option value="">Select an author</option>
+              <option value="">Выбрать автора</option>
               {authors.map(author => (
                 <option key={author.id} value={author.id}>
                   {author.name}
@@ -188,7 +188,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
           
           <div>
             <label htmlFor="genre_id" className="block text-sm font-medium text-gray-700 mb-1">
-              Genre *
+              Жанр *
             </label>
             <select
               id="genre_id"
@@ -198,7 +198,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             >
-              <option value="">Select a genre</option>
+              <option value="">Выберите жанр</option>
               {genres.map(genre => (
                 <option key={genre.id} value={genre.id}>
                   {genre.name}
@@ -210,7 +210,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
         
         <div className="mt-6">
           <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-            Description
+            Описание
           </label>
           <textarea
             id="description"
@@ -229,7 +229,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
             onClick={onCancel}
             className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Cancel
+            Отмена
           </button>
           <button
             type="submit"
@@ -240,7 +240,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
                 : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
             }`}
           >
-            {loading ? 'Saving...' : (bookId ? 'Update Book' : 'Create Book')}
+            {loading ? 'Сохранение...' : (bookId ? 'Обновить книгу' : 'Создать книгу')}
           </button>
         </div>
       </form>

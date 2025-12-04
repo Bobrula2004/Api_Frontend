@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const BookTable = ({ books, onDelete, onEdit }) => {
   const handleDelete = (id) => {
-    if (window.confirm('Are you sure you want to delete this book?')) {
+    if (window.confirm('Вы точно ли хотите удалить эту книгу?')) {
       onDelete(id);
     }
   };
@@ -41,16 +41,16 @@ const BookTable = ({ books, onDelete, onEdit }) => {
                 <div className="text-sm text-gray-500">{book.page_count || 'N/A'}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                <Link to={`/books/${book.id}`} className="text-blue-600 hover:text-blue-900 mr-3">View</Link>
+                <Link to={`/books/${book.id}`} className="text-blue-600 hover:text-blue-900 mr-3">Показать</Link>
                 <Link to={`/books/edit/${book.id}`} className="text-green-600 hover:text-green-900 mr-3" onClick={(e) => {
                   e.preventDefault();
                   onEdit(book);
-                }}>Edit</Link>
+                }}>Обновить</Link>
                 <button 
                   onClick={() => handleDelete(book.id)}
                   className="text-red-600 hover:text-red-900"
                 >
-                  Delete
+                  Удалить
                 </button>
               </td>
             </tr>

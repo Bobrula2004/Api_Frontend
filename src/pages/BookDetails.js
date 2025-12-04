@@ -52,7 +52,7 @@ const BookDetails = () => {
             onClick={() => navigate('/books')}
             className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
           >
-            Back to Books
+            Вернуться к книгам
           </button>
         </div>
       </div>
@@ -63,12 +63,12 @@ const BookDetails = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="bg-yellow-100 text-yellow-700 p-4 rounded">
-          Book not found
+          Книга не найдена
           <button 
             onClick={() => navigate('/books')}
             className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
           >
-            Back to Books
+              Вернуться к книгам
           </button>
         </div>
       </div>
@@ -82,40 +82,40 @@ const BookDetails = () => {
           <div className="flex justify-between items-start">
             <div>
               <h1 className="text-3xl font-bold text-gray-800 mb-2">{book.title}</h1>
-              <p className="text-gray-600 text-lg mb-4">by {book.author?.name || 'Unknown Author'}</p>
+              <p className="text-gray-600 text-lg mb-4">by {book.author?.name || 'Неизвестный автор'}</p>
             </div>
             <div className="flex space-x-2">
               <button
                 onClick={() => navigate(`/books/edit/${book.id}`)}
                 className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
               >
-                Edit
+                Изменить
               </button>
               <button
                 onClick={handleDelete}
                 className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
               >
-                Delete
+                Удалить
               </button>
             </div>
           </div>
           
           <div className="mt-6 grid grid-cols-2 gap-4 text-gray-700">
             <div>
-              <p><span className="font-medium">Genre:</span> {book.genre?.name || 'N/A'}</p>
-              <p><span className="font-medium">Publication Year:</span> {book.publication_year || 'N/A'}</p>
-              <p><span className="font-medium">Pages:</span> {book.page_count || 'N/A'}</p>
+              <p><span className="font-medium">Жанр:</span> {book.genre?.name || 'N/A'}</p>
+              <p><span className="font-medium">Год публикации:</span> {book.publication_year || 'N/A'}</p>
+              <p><span className="font-medium">Страниццы:</span> {book.page_count || 'N/A'}</p>
               <p><span className="font-medium">ISBN:</span> {book.isbn || 'N/A'}</p>
             </div>
             <div>
-              <p><span className="font-medium">Created:</span> {new Date(book.created_at).toLocaleDateString()}</p>
+              <p><span className="font-medium">Создана:</span> {new Date(book.created_at).toLocaleDateString()}</p>
             </div>
           </div>
           
           <div className="mt-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Description</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">Описание</h2>
             <p className="text-gray-600">
-              {book.description || 'No description available.'}
+              {book.description || 'Описание не доступно'}
             </p>
           </div>
           
@@ -124,7 +124,7 @@ const BookDetails = () => {
               onClick={() => navigate('/books')}
               className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
             >
-              Back to Books
+                Вернуться к книгам
             </button>
           </div>
         </div>
