@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const BookCard = ({ book, onDelete }) => {
   const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete this book?')) {
+    if (window.confirm('Вы уверены, что хотите удалить книгу?')) {
       onDelete(book.id);
     }
   };

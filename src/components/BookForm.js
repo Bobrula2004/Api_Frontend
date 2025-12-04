@@ -113,7 +113,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Book title"
+              placeholder="Название книги"
             />
           </div>
           
@@ -128,7 +128,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               value={formData.isbn}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="ISBN number"
+              placeholder="ISBN номер"
             />
           </div>
           
@@ -145,7 +145,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               min="1000"
               max="2100"
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Year of publication"
+              placeholder="Год издания"
             />
           </div>
           
@@ -161,7 +161,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
               onChange={handleChange}
               min="1"
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Number of pages"
+              placeholder="Количество страниц"
             />
           </div>
           
@@ -219,7 +219,7 @@ const BookForm = ({ bookId, onSubmit, onCancel }) => {
             onChange={handleChange}
             rows="4"
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Book description"
+            placeholder="Описание книги"
           />
         </div>
         
